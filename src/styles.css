@@ -1,0 +1,89 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-harvest: var(--harvest);
+  --color-harvest-foreground: var(--harvest-foreground);
+  --color-earth: var(--earth);
+  --color-leaf: var(--leaf);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.985 0.012 105);
+  --foreground: oklch(0.24 0.03 145);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.03 145);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.03 145);
+  --primary: oklch(0.42 0.1 150);
+  --primary-foreground: oklch(0.98 0.01 105);
+  --secondary: oklch(0.94 0.03 115);
+  --secondary-foreground: oklch(0.32 0.06 145);
+  --muted: oklch(0.94 0.02 110);
+  --muted-foreground: oklch(0.48 0.03 130);
+  --accent: oklch(0.92 0.06 95);
+  --accent-foreground: oklch(0.3 0.05 90);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.98 0.01 105);
+  --border: oklch(0.89 0.02 115);
+  --input: oklch(0.89 0.02 115);
+  --ring: oklch(0.42 0.1 150);
+  --harvest: oklch(0.78 0.14 85);
+  --harvest-foreground: oklch(0.25 0.05 90);
+  --earth: oklch(0.45 0.06 60);
+  --leaf: oklch(0.55 0.13 145);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility font-display {
+  font-family: "Fraunces", Georgia, serif;
+}
+
+@utility font-body {
+  font-family: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+}
